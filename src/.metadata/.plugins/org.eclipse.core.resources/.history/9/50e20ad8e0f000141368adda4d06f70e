@@ -11,17 +11,15 @@ public class Main {
 		Thread th1 = new Thread(new Runnable(){
 
 			public void run() {
-				while(true){
-					par.parse(counter);
-					try {
-						Thread.sleep(3000);
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-					for(Entry<String, Integer> pair : counter.entrySet()){
-						System.out.println(pair);
-					}
+				par.parse(counter);
+				try {
+					Thread.sleep(3000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				for(Entry<String, Integer> pair : counter.entrySet()){
+					System.out.println(pair);
 				}
 				
 			}

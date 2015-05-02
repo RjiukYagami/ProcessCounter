@@ -1,0 +1,9 @@
+
+public class Main {
+	
+	public static void main(String[] args){
+		Parser par = new Parser();
+		HashMap<String, Integer> counter = new HashMap<String, Integer>();
+		par.parse();
+	}
+}

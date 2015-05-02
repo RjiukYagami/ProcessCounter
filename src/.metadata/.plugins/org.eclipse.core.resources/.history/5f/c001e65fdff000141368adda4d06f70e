@@ -1,10 +1,7 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.HashMap;
 
 
 public class Parser {
-	public void parse(HashMap<String, Integer> counter){
+	public void parse(HashMap<String, int> counter){
 		try {
 			String line;
 		    Process p = Runtime.getRuntime().exec("ps -e");
@@ -23,13 +20,7 @@ public class Parser {
 		    		index = line.lastIndexOf('C');
 		    		first = false;
 		    	} else {
-		    		String command = line.substring(index);
-		    		if(counter.containsKey(command)){
-		    			counter.replace(command, counter.get(command)+1);
-		    		}
-		    		else 
-		    			counter.put(command, 1);
-		    		
+		    		System.out.println(line.substring(index));
 		    	}
 		    }
 		    input.close();

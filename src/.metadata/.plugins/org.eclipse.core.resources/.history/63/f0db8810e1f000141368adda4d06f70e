@@ -25,7 +25,9 @@ public class Parser {
 		    	} else {
 		    		String command = line.substring(index);
 		    		if(counter.containsKey(command)){
-		    			counter.replace(command, counter.get(command)+1);
+		    			int howMany = counter.get(command)+1;
+		    			counter.remove(command);
+		    			counter.put(command, howMany);
 		    		}
 		    		else 
 		    			counter.put(command, 1);

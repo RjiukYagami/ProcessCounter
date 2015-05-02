@@ -24,11 +24,7 @@ public class Parser {
 		    		first = false;
 		    	} else {
 		    		String command = line.substring(index);
-		    		if(counter.containsKey(command)){
-		    			counter.replace(command, counter.get(command)+1);
-		    		}
-		    		else 
-		    			counter.put(command, 1);
+		    		counter.put(command ,counter.get(command)+1);
 		    		
 		    	}
 		    }

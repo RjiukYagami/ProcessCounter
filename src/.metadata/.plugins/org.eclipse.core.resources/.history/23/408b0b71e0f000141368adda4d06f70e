@@ -23,12 +23,7 @@ public class Parser {
 		    		index = line.lastIndexOf('C');
 		    		first = false;
 		    	} else {
-		    		String command = line.substring(index);
-		    		if(counter.containsKey(command)){
-		    			counter.replace(command, counter.get(command)+1);
-		    		}
-		    		else 
-		    			counter.put(command, 1);
+		    		System.out.println(line.substring(index));
 		    		
 		    	}
 		    }
